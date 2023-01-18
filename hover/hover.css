@@ -1,0 +1,38 @@
+body  {
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background: black;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+p{
+    
+    position: relative;
+    text-transform:uppercase;
+    color: red;
+    letter-spacing: 0px;
+    font-size:7rem;
+    user-select:none;
+    font-family:'Oswald', sans-serif;
+}
+p::before , p::after{
+    content:"likith";
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-text-stroke:2px red;
+    -webkit-text-fillor-color:transparent;
+    opacity:.4;
+    transition: .2s ease;
+    z-index:-1;
+}
+p:hover:before{
+    transform:translateY(80px)scale(.8);
+}
+p:hover:after{
+    transform:translateY(-80px)scale(.8);
+}
